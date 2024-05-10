@@ -149,14 +149,12 @@ void IMSettingWindow::initUI()
     //~ child_page Manage Input Methods
     m_addIMBtn->setToolTip(tr("Add Input Method"));
     m_addIMBtn->setAccessibleName("AddInputMethod");
-    m_addIMBtn->setMaximumHeight(50);
+    m_addIMBtn->setMaximumHeight(55);
     GSettingWatcher::instance()->bind(GSETTINGS_ADD_IM, m_addIMBtn);
     QHBoxLayout *headLayout = new QHBoxLayout(this);
     headLayout->setMargin(0);
     headLayout->setSpacing(0);
-    headLayout->addItem(new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
     headLayout->addWidget(m_addIMBtn);
-    headLayout->addItem(new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum));
 
     //添加至主界面内
     subLayout->addWidget(scrollArea, 50);
